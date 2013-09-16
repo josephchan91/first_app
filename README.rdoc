@@ -1,4 +1,1 @@
-http://secret-garden-7126.herokuapp.com/
-
-I needed to add my public key to Heroku with 'heroku keys:add ~/.ssh/id_rsa.pub'.
-In the gemfile, I had to put the sqlite3 gem in 'group :development do', because Heroku didn't like it.
+http://secret-garden-7126.herokuapp.com
