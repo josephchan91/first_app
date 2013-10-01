@@ -1,0 +1,7 @@
+<h1>ADD A SONG</h1>
+<%= form_for(@song) do |f| %>
+  <%= f.label :title, 'Song Title' %>
+  <%= f.text_field :title %>
+  <%= f.submit "Add song" %>
+<% end %>
+<%= link_to "View songs!", (songs_path) %>
