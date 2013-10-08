@@ -1,2 +1,7 @@
-Song title: <%= @song.title %>
-In playlist <%= @song.playlist.name %>
+<b>SONG TITLE:</b> <%= @song.title %><br>
+<b>IN PLAYLISt:</b>
+<% if @song.playlist %>
+<%= @song.playlist.name %>
+<% else %>
+None
+<% end %>
