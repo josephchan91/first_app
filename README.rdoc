@@ -1,1 +1,9 @@
 http://secret-garden-7126.herokuapp.com
+
+I added edit, update, destroy for songs.
+
+I added edit, update, destroy for playlists.
+
+I let playlists has_many: songs, through: playlists_songs
+
+However, I do not have functionality to actually add songs to a playlist yet.
