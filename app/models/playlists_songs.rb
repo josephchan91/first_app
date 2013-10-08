@@ -1,2 +1,2 @@
-class PlaylistsSongs < ActiveRecord::Base
+class PlaylistsSong < ActiveRecord::Base
 end

@@ -1,7 +1,6 @@
 class SongsController < ApplicationController
   def index
     @songs = Song.all
-    @playlist_song = PlaylistsSongs.new
   end
 
   def new
@@ -43,6 +42,6 @@ class SongsController < ApplicationController
   private
 
     def song_params
-      params.require(:song).permit(:title)
+      params.require(:song).permit(:title, :playlist_id)
     end
 end

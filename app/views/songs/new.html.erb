@@ -2,5 +2,6 @@
 <%= form_for(@song) do |f| %>
   <%= f.label :title, 'Song Title' %>
   <%= f.text_field :title %>
+  <%= f.collection_select(:playlist_id, Playlist.all, :id, :name) %>
   <%= f.submit "Add song" %>
 <% end %>

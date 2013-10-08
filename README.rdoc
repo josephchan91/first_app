@@ -4,6 +4,7 @@ I added edit, update, destroy for songs.
 
 I added edit, update, destroy for playlists.
 
-I let playlists has_many: songs, through: playlists_songs
-
-However, I do not have functionality to actually add songs to a playlist yet.
+NOTE:
+For now, I let a song belong_to a playlist, even though this should really be
+a many-to-many relationship. It's just I tried has_many :through, but couldn't get
+the associations to work.
