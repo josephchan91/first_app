@@ -1,6 +1,23 @@
 <h1>SONGS</h1>
 <% @songs.each do |s| %>
-  <%= s.title %> <br>
+  <div id="song_row">
+    <div id="song_title">
+      <%= link_to "#{s.title}", song_path(s.id) %>
+    </div>
+    <div id="song_fxns">
+      <%= link_to "Edit", edit_song_path(s.id) %> | 
+      <%= link_to "Remove", s, confirm: "fosho?", method: :delete %>
+      <% collection_select(
+        :post, 
+        :playlist_id,
+        Playlist.all,
+        :id,
+        :name)      %>
+      <% link_to "Add to Playlist",
+        playlists_songs_path(
+          @playlist_song,
+          song_id: s.id ),
+          :method => :put %>
+    </div>
+  </div>
 <% end %>
-<br><br>
-<%= link_to "Add songs", new_songs_path %>

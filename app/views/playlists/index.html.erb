@@ -1,0 +1,12 @@
+<h1>PLAYLISTS</h1>
+<% @playlists.each do |p| %>
+  <div id="song_row">
+    <div id="song_title">
+      <%= link_to "#{p.name}", playlist_path(p.id) %>
+    </div>
+    <div id="song_fxns">
+      <%= link_to "Edit", edit_playlist_path(p.id) %> | 
+      <%= link_to "Remove", p, confirm: "fosho?", method: :delete %>
+    </div>
+  </div>
+<% end %>

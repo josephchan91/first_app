@@ -1,3 +1,33 @@
 // Place all the styles related to the Songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    font-family: Helvetica;
+}
+
+#song_row {
+    background-color: #F4F4F4;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+#song_title {
+    width: 200px;
+    display: inline-block;
+}
+
+#song_fxns {
+    width: 400px;
+    display: inline-block;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
