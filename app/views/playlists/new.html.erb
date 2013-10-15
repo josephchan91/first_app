@@ -1,6 +1,8 @@
 <h1>Create a Playlist</h1>
 <%= form_for(@playlist) do |f| %>
-  <%= f.label :title, 'Playlist Title' %>
-  <%= f.text_field :name %>
-  <%= f.submit "Create Playlist" %>
+  <div>
+    <%= render 'shared/error_messages', record: @playlist %>
+    <%= f.text_field :name, placeholder: "Playlist Name" %>
+    <div class="submit-btn"><%= f.submit "Create Playlist", class: "btn btn-default" %></div>
+  </div>
 <% end %>

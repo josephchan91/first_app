@@ -1,10 +1,12 @@
 http://secret-garden-7126.herokuapp.com
 
-I added edit, update, destroy for songs.
+Validations:
+1. Presence and uniquness for song title
+2. Presence and uniquenes for playlist name
 
-I added edit, update, destroy for playlists.
 
-NOTE:
-For now, I let a song belong_to a playlist, even though this should really be
-a many-to-many relationship. It's just I tried has_many :through, but couldn't get
-the associations to work.
+Styling
+1. Navbar (Bootstrap)
+2. Custom font (Google fonts)
+3. Layout for forms
+4. Layout for viewing songs/playlists

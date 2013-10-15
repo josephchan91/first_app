@@ -2,16 +2,26 @@
 <html>
 <head>
   <title>FirstApp</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to "Add Song", new_song_path %> || 
-  <%= link_to "View All Songs", songs_path %> || 
-  <%= link_to "Create a Playlist", new_playlist_path %> || 
-  <%= link_to "View All Playlists", playlists_path %><br>
-  <br>
-  <%= yield %>
+  <header class="navbar navbar-fixed-top firstapp-navbar">
+      <nav class="navbar-inner firstapp-navbar">
+        <div class="container">
+          <ul class="nav">
+          <li><%= link_to "Add Song", new_song_path %></li> 
+          <li><%= link_to "View All Songs", songs_path %></li>
+          <li><%= link_to "Create a Playlist", new_playlist_path %></li>
+          <li><%= link_to "View All Playlists", playlists_path %></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>

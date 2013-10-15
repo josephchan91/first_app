@@ -1,7 +1,10 @@
 <h1>ADD A SONG</h1>
 <%= form_for(@song) do |f| %>
-  <%= f.label :title, 'Song Title' %>
-  <%= f.text_field :title %>
-  <%= f.collection_select(:playlist_id, Playlist.all, :id, :name) %>
-  <%= f.submit "Add song" %>
+  <%= render 'shared/error_messages', record: @song %>
+  <div>
+    <%= f.text_field :title, placeholder: "Song Title" %>
+    <%= f.label "Playlist" %>
+    <%= f.collection_select(:playlist_id, Playlist.all, :id, :name) %>
+    <div class="submit-btn"><%= f.submit "Add song", class: "btn btn-default" %></div>
+  </div>
 <% end %>

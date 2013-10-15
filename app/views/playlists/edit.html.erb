@@ -1,5 +1,5 @@
 <%= form_for(@playlist) do |f| %>
   <p>Edit Playlist</p>
   <%= f.text_field :name %>
-  <%= f.submit %>
+  <div class="submit-btn"><%= f.submit "Update", class: "btn btn-default" %></div>
 <% end %>
