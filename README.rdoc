@@ -1,4 +1,4 @@
 http://secret-garden-7126.herokuapp.com
 
-I added the HAML gem and redid most of my views. Surprisingly didn't run into any problems.
-HAML is pretty sweet.
+I added the HAML gem and redid most of my views, converting from erb. Surprisingly didn't run into any problems.
+HAML is pretty sweet. See the *.html.haml files in /app/views/ for these changes.
