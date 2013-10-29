@@ -1,0 +1,7 @@
+%b SONG TITLE: #{ @song.title }
+<br/>
+%b IN PLAYLISt:
+- if @song.playlist
+  = @song.playlist.name
+- else
+  None

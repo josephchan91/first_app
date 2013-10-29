@@ -1,0 +1,17 @@
+%h1 SONGS
+- @songs.each do |s|
+  #song_row
+    #song_title
+      = link_to "#{s.title}", song_path(s.id)
+    #song_fxns
+      #{ link_to "Edit", edit_song_path(s.id) } | 
+      = link_to "Remove", s, confirm: "fosho?", method: :delete
+      - collection_select(:post, 
+                          :playlist_id,
+                          Playlist.all,
+                          :id,
+                          :name)
+      - link_to "Add to Playlist",
+                playlists_songs_path(@playlist_song,
+                                     song_id: s.id ),
+                :method => :put

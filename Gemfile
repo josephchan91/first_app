@@ -6,6 +6,8 @@ group :production do
     gem 'rails_12factor', '0.0.2'
 end
 
+gem 'haml', '4.0.3'
+
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

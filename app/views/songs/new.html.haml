@@ -1,0 +1,9 @@
+%h1 ADD A SONG
+= form_for(@song) do |f|
+  = render 'shared/error_messages', record: @song
+  %div
+    = f.text_field :title, placeholder: "Song Title"
+    = f.label "Playlist:"
+    = f.collection_select(:playlist_id, Playlist.all, :id, :name)
+    .submit-btn
+      = f.submit "Add song", class: "btn btn-default"

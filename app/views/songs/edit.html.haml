@@ -1,0 +1,5 @@
+= form_for(@song) do |f|
+  %p Edit Song
+  = f.text_field :title
+  .submit-btn
+    = f.submit "Update", class: "btn btn-default"

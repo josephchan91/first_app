@@ -1,0 +1,8 @@
+%h1 PLAYLISTS
+- @playlists.each do |p|
+  #song_row
+    #song_title
+      = link_to "#{p.name}", playlist_path(p.id)
+    #song_fxns
+      = link_to "Edit", edit_playlist_path(p.id) |
+      = link_to "Remove", p, confirm: "fosho?", method: :delete
