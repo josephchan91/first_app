@@ -1,12 +1,4 @@
 http://secret-garden-7126.herokuapp.com
 
-Validations:
-1. Presence and uniquness for song title
-2. Presence and uniquenes for playlist name
-
-
-Styling
-1. Navbar (Bootstrap)
-2. Custom font (Google fonts)
-3. Layout for forms
-4. Layout for viewing songs/playlists
+I added the HAML gem and redid most of my views. Surprisingly didn't run into any problems.
+HAML is pretty sweet.
