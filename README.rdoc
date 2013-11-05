@@ -1,4 +1,15 @@
 http://secret-garden-7126.herokuapp.com
 
-I added the HAML gem and redid most of my views, converting from erb. Surprisingly didn't run into any problems.
-HAML is pretty sweet. See the *.html.haml files in /app/views/ for these changes.
+I added the Pusher Heroku addon to my app for websocket funtionality.
+I implemented a binding between my songs#index view and
+my songs controller, so that whenever a song is created, the songs#index view
+refreshes itself to reflect the changes.
+
+To do this, I had to:
+1.) Add/install 'pusher' gem
+2.) In 'songs.js', create a pusher object that subscribes to 'songs_channel' and listens
+for 'song_added' messages
+3.) In my songs controller, publish a 'song_added' message in the 'create' method
+
+To add more real-time behavior, I could have had events for a song being edited/deleted,
+as well as similar behavior for playlists.

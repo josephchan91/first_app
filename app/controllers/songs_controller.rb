@@ -10,6 +10,7 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     if @song.save
+      Pusher['songs_channel'].trigger('song_added', {})
       redirect_to action: 'index'
     else
       render :new
