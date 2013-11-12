@@ -2,6 +2,7 @@
   %script{src: "http://js.pusher.com/2.1/pusher.min.js"}
   = javascript_include_tag "songs"
 
+
 %h1 SONGS
 - @songs.each do |s|
   #song_row
@@ -19,3 +20,9 @@
                 playlists_songs_path(@playlist_song,
                                      song_id: s.id ),
                 :method => :put
+
+%h1 SONGS WITHOUT PLAYLIST
+- @songs_no_playlist.each do |s|
+  #song_row
+    #song_title
+      = s.title
