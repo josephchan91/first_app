@@ -1,5 +1,24 @@
 http://secret-garden-7126.herokuapp.com
 
+HW8
+I added the Pusher Heroku addon to my app for websocket funtionality.
+I implemented a binding between my songs#index view and
+my songs controller, so that whenever a song is created, the songs#index view
+refreshes itself to reflect the changes.
+
+To do this, I had to:
+1.) Add/install 'pusher' gem
+2.) In 'songs.js', create a pusher object that subscribes to 'songs_channel' and listens
+for 'song_added' messages
+3.) In my songs controller, publish a 'song_added' message in the 'create' method
+
+To test, open two tabs, one with the songs#new view and one with the songs#index view.
+When you create a new song, the index view should reload.
+
+To add more real-time behavior, I could have had events for a song being edited/deleted,
+as well as similar behavior for playlists.
+
+HW9
 I added a scope to my song model (song.rb) for getting all songs that do not
 belong to any playlist. Next, in my songs controller index method, I assigned
 these songs to a @songs_no_playlist instance variable. Finally, in songs#index, 
