@@ -2,18 +2,19 @@ body {
     font-family: 'Roboto Slab', sans-serif;
 }
 
-#song_row {
+.song_row {
     background-color: #F4F4F4;
     margin-bottom: 5px;
     padding: 10px;
+    border-width: 1px;
 }
 
-#song_title {
+.song_title {
     width: 200px;
     display: inline-block;
 }
 
-#song_fxns {
+.song_fxns {
     width: 400px;
     display: inline-block;
 }

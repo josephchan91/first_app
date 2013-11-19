@@ -5,10 +5,10 @@
 
 %h1 SONGS
 - @songs.each do |s|
-  #song_row
-    #song_title
+  .song_row
+    .song_title
       = link_to "#{s.title}", song_path(s.id)
-    #song_fxns
+    .song_fxns
       #{ link_to "Edit", edit_song_path(s.id) } | 
       = link_to "Remove", s, confirm: "fosho?", method: :delete
       - collection_select(:post, 
@@ -23,6 +23,6 @@
 
 %h1 SONGS WITHOUT PLAYLIST
 - @songs_no_playlist.each do |s|
-  #song_row
-    #song_title
+  .song_row
+    .song_title
       = s.title

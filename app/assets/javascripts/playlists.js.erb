@@ -1,0 +1,11 @@
+$(function() {
+  $(".song_row").hover(
+    function() {
+      $(this).find(".playlist_songs").show();
+      $(this).addClass("bordered-playlist");
+    },
+    function() {
+      $(this).find(".playlist_songs").hide();
+      $(this).removeClass("bordered-playlist");
+    });
+});
