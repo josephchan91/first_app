@@ -23,3 +23,10 @@ I added a scope to my song model (song.rb) for getting all songs that do not
 belong to any playlist. Next, in my songs controller index method, I assigned
 these songs to a @songs_no_playlist instance variable. Finally, in songs#index, 
 I added a table for these songs under 'SONGS WITHOUT PLAYLIST'.
+
+
+HW10
+
+I added jquery functionality to my playlists#index view.
+When hovering over a playlist row, the songs for that playlist are shown,
+and the border of the row turns black.
